@@ -196,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/kerberos/" style="font-size: 10px;">kerberos</a>
                     </div>
                 </section>
                 
@@ -270,6 +270,80 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-keytab基本操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
+      <time datetime="2020-10-19T06:16:33.000Z" itemprop="datePublished">2020-10-19</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">keytab基本操作</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Keytab基本操作"><a href="#Keytab基本操作" class="headerlink" title="Keytab基本操作"></a>Keytab基本操作</h1><h2 id="显示-keytab-文件列表"><a href="#显示-keytab-文件列表" class="headerlink" title="显示 keytab 文件列表"></a>显示 keytab 文件列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">klist -ket &lt;keytab_file&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="合并-keytab-文件"><a href="#合并-keytab-文件" class="headerlink" title="合并 keytab 文件"></a>合并 keytab 文件</h2><p>使用ktutil工具 (进入工具后，输入?可获取帮助)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 命令行输入</span><br><span class="line">ktutil</span><br><span class="line"></span><br><span class="line"># 工具内输入</span><br><span class="line">ktutil: rkt &lt;input_keytab1&gt;</span><br><span class="line">ktutil: rkt &lt;input_keytab2&gt;</span><br><span class="line">ktutil: wkt &lt;output_keytab&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="重新生成keytab"><a href="#重新生成keytab" class="headerlink" title="重新生成keytab"></a>重新生成keytab</h2><p>进去kadmin.local或者kadmin，然后调用xst即可。<br>注意，必须加上norandkey参数， 否则生成keytab的时候会更新密码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xst -k &#x2F;tmp&#x2F;http.keytab -norandkey HTTP&#x2F;ubuntu-slave@MyRealm</span><br></pre></td></tr></table></figure>
+<p>查看密码是否被更新了，也是在kadmin内执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getprinc &lt;princ_name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>输出信息如下， 里面就有密码最后的更新时间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Principal: HTTP&#x2F;ubuntu-master@MyRealm</span><br><span class="line">Expiration date: [never]</span><br><span class="line">Last password change: Thu Jan 09 18:24:21 CST 2020</span><br><span class="line">Password expiration date: [none]</span><br><span class="line">Maximum ticket life: 0 days 10:00:00</span><br><span class="line">Maximum renewable life: 7 days 00:00:00</span><br><span class="line">Last modified: Thu Jan 09 18:24:21 CST 2020 (HTTP&#x2F;admin@MyRealm)</span><br><span class="line">Last successful authentication: Fri Jan 10 16:29:36 CST 2020</span><br><span class="line">Last failed authentication: Thu Jan 09 20:30:15 CST 2020</span><br><span class="line">Failed password attempts: 0</span><br><span class="line">Number of keys: 4</span><br><span class="line">Key: vno 7, aes256-cts-hmac-sha1-96</span><br><span class="line">Key: vno 7, arcfour-hmac</span><br><span class="line">Key: vno 7, des3-cbc-sha1</span><br><span class="line">Key: vno 7, des-cbc-crc</span><br><span class="line">MKey: vno 1</span><br><span class="line">Attributes: REQUIRES_PRE_AUTH</span><br><span class="line">Policy: [none]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hadoop/" rel="tag">hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kerberos/" rel="tag">kerberos</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-解压和生成initrd" class="article article-type-post" itemscope itemprop="blogPost">
   

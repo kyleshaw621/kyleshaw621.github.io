@@ -7,16 +7,20 @@
   
   
   
-  <title>Archives: 2020/10 | 不想奋斗的码农</title>
+  <title>keytab基本操作 | 不想奋斗的码农</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不要问，问了我怕我不懂">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不想奋斗的码农">
-<meta property="og:url" content="http://kyleshaw.cn/archives/2020/10/index.html">
+  <meta name="description" content="Keytab基本操作显示 keytab 文件列表1klist -ket &lt;keytab_file&gt;  合并 keytab 文件使用ktutil工具 (进入工具后，输入?可获取帮助) 1234567# 命令行输入ktutil# 工具内输入ktutil: rkt &lt;input_keytab1&gt;ktutil: rkt &lt;input_keytab2&gt;ktutil: wk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="keytab基本操作">
+<meta property="og:url" content="http://kyleshaw.cn/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="不想奋斗的码农">
-<meta property="og:description" content="不要问，问了我怕我不懂">
+<meta property="og:description" content="Keytab基本操作显示 keytab 文件列表1klist -ket &lt;keytab_file&gt;  合并 keytab 文件使用ktutil工具 (进入工具后，输入?可获取帮助) 1234567# 命令行输入ktutil# 工具内输入ktutil: rkt &lt;input_keytab1&gt;ktutil: rkt &lt;input_keytab2&gt;ktutil: wk">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-19T06:16:33.000Z">
+<meta property="article:modified_time" content="2020-10-19T06:18:16.488Z">
 <meta property="article:author" content="Kyle Shaw">
+<meta property="article:tag" content="kerberos">
+<meta property="article:tag" content="hadoop">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="不想奋斗的码农" type="application/atom+xml">
@@ -46,8 +50,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -266,85 +270,210 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-keytab基本操作" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a  href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-      <time datetime="2020-10-19T06:16:33.000Z" itemprop="datePublished">10-19</time>
+    <div class="article-meta">
+      <a  href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
+      <time datetime="2020-10-19T06:16:33.000Z" itemprop="datePublished">2020-10-19</time>
 </a>
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">keytab基本操作</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      keytab基本操作
     </h1>
   
 
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hadoop/" rel="tag">hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kerberos/" rel="tag">kerberos</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a  href="/2020/10/19/%E8%A7%A3%E5%8E%8B%E5%92%8C%E7%94%9F%E6%88%90initrd/" class="archive-article-date">
-      <time datetime="2020-10-19T03:41:16.000Z" itemprop="datePublished">10-19</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2020/10/19/%E8%A7%A3%E5%8E%8B%E5%92%8C%E7%94%9F%E6%88%90initrd/">解压和生成initrd</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <h1 id="Keytab基本操作"><a href="#Keytab基本操作" class="headerlink" title="Keytab基本操作"></a>Keytab基本操作</h1><h2 id="显示-keytab-文件列表"><a href="#显示-keytab-文件列表" class="headerlink" title="显示 keytab 文件列表"></a>显示 keytab 文件列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">klist -ket &lt;keytab_file&gt;</span><br></pre></td></tr></table></figure>
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<h2 id="合并-keytab-文件"><a href="#合并-keytab-文件" class="headerlink" title="合并 keytab 文件"></a>合并 keytab 文件</h2><p>使用ktutil工具 (进入工具后，输入?可获取帮助)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 命令行输入</span><br><span class="line">ktutil</span><br><span class="line"></span><br><span class="line"># 工具内输入</span><br><span class="line">ktutil: rkt &lt;input_keytab1&gt;</span><br><span class="line">ktutil: rkt &lt;input_keytab2&gt;</span><br><span class="line">ktutil: wkt &lt;output_keytab&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="重新生成keytab"><a href="#重新生成keytab" class="headerlink" title="重新生成keytab"></a>重新生成keytab</h2><p>进去kadmin.local或者kadmin，然后调用xst即可。<br>注意，必须加上norandkey参数， 否则生成keytab的时候会更新密码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xst -k &#x2F;tmp&#x2F;http.keytab -norandkey HTTP&#x2F;ubuntu-slave@MyRealm</span><br></pre></td></tr></table></figure>
+<p>查看密码是否被更新了，也是在kadmin内执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getprinc &lt;princ_name&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>输出信息如下， 里面就有密码最后的更新时间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Principal: HTTP&#x2F;ubuntu-master@MyRealm</span><br><span class="line">Expiration date: [never]</span><br><span class="line">Last password change: Thu Jan 09 18:24:21 CST 2020</span><br><span class="line">Password expiration date: [none]</span><br><span class="line">Maximum ticket life: 0 days 10:00:00</span><br><span class="line">Maximum renewable life: 7 days 00:00:00</span><br><span class="line">Last modified: Thu Jan 09 18:24:21 CST 2020 (HTTP&#x2F;admin@MyRealm)</span><br><span class="line">Last successful authentication: Fri Jan 10 16:29:36 CST 2020</span><br><span class="line">Last failed authentication: Thu Jan 09 20:30:15 CST 2020</span><br><span class="line">Failed password attempts: 0</span><br><span class="line">Number of keys: 4</span><br><span class="line">Key: vno 7, aes256-cts-hmac-sha1-96</span><br><span class="line">Key: vno 7, arcfour-hmac</span><br><span class="line">Key: vno 7, des3-cbc-sha1</span><br><span class="line">Key: vno 7, des-cbc-crc</span><br><span class="line">MKey: vno 1</span><br><span class="line">Attributes: REQUIRES_PRE_AUTH</span><br><span class="line">Policy: [none]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">keytab基本操作</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问  的个人博客"></a></p>
+        <p><span>发布时间:</span>2020年10月19日 - 14时16分</p>
+        <p><span>最后更新:</span>2020年10月19日 - 14时18分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="keytab基本操作">http://kyleshaw.cn/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://kyleshaw.cn/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/　　作者: " title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2020/10/19/%E8%A7%A3%E5%8E%8B%E5%92%8C%E7%94%9F%E6%88%90initrd/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解压和生成initrd</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">Keytab基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA-keytab-%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">显示 keytab 文件列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E5%B9%B6-keytab-%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">合并 keytab 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90keytab"><span class="toc-number">1.3.</span> <span class="toc-text">重新生成keytab</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
 
     
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
 
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2020/10/19/%E8%A7%A3%E5%8E%8B%E5%92%8C%E7%94%9F%E6%88%90initrd/" title="下一篇: 解压和生成initrd">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/10/19/keytab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">keytab基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/19/%E8%A7%A3%E5%8E%8B%E5%92%8C%E7%94%9F%E6%88%90initrd/">解压和生成initrd</a></li></ul>
+    
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
@@ -438,18 +567,6 @@ ga('send', 'pageview');
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
